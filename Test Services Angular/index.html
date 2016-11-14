@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div ng-app="myApp">
+
+        <!-- Componente Two -->
+        <div ng-controller="controllerTwo as c2">
+            <h1>Parent</h1>
+            <input type="text" ng-model="c2.message" />
+            <button ng-click="c2.sendEvent()">Send Event</button>
+        </div>
+        <!-- /Componente Two -->
+
+        <!-- Componente Three -->
+        <div ng-controller="controllerThree as c3">
+            <h1>son</h1>
+            <div>
+                <p>Message for controller two: {{ c3.data() }}</p>
+            </div>
+        </div>
+        <!-- /Componente Three -->
+    </div>
+    </div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="app.js"></script>
+
+</html>
